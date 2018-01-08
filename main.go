@@ -124,7 +124,7 @@ func main() {
 	r := mux.NewRouter()
 
 	//get the manifest for an image
-	r.HandleFunc("/{account}/{repository:.+\\/.+}/{tag}/metadata", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/{account}/{repository}/{tag}/metadata", func(w http.ResponseWriter, r *http.Request) {
 		vars := mux.Vars(r)
 
 		hub, err := getRegistryInstance(vars["account"])
