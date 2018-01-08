@@ -146,7 +146,7 @@ func main() {
 	})
 
 	//get History.V1Compatibility information for an image
-	r.HandleFunc("/{account}/{repository:.+\\/.+}/{tag}/history", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/{account}/{repository}/{tag}/history", func(w http.ResponseWriter, r *http.Request) {
 		vars := mux.Vars(r)
 		hub, err := getRegistryInstance(vars["account"])
 
