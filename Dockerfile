@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.24
 
 VOLUME /usr/src/config
 VOLUME /usr/src/passwords
