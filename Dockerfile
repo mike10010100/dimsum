@@ -5,7 +5,7 @@ VOLUME /usr/src/passwords
 
 EXPOSE 8080
 
-RUN apk add -U ca-certificates
+RUN apk add --no-cache ca-certificates
 
 COPY dimsum /bin/
 
